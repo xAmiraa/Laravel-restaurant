@@ -7,20 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Shaif's Cuisine</title>
-    @production
-   <link rel="stylesheet" href="{{ URL::secure_asset('css/reset.css') }}">
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/globalStyles.css') }}">
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/components.css') }}">
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/menu.css') }}">
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/sendConfirm.css') }}">
-
-    @endproduction
+    
+    <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/globalStyles.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/components.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/sendConfirm.css') }}">
 
 
     <!-- aos library css  -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Add your custom css -->
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
 </head>
 
 <body>
@@ -29,7 +27,7 @@
         <div class="container">
             <div class="nav__wrapper">
                 <a href="./index.html" class="logo">
-                    <img src="{{ URL::secure_asset('images/logo.svg') }}" alt="shaif's cuisine">
+                    <img src="{{ URL::asset('images/logo.svg') }}" alt="shaif's cuisine">
                 </a>
                 <nav>
                     <div class="nav__icon">
@@ -246,9 +244,9 @@
     <!-- End Footer -->
 
     <!-- aos script -->
-    <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- custom script -->
-    <script type="text/javascript" src="{{ URL::asset('js/main.js') }}" defer></script>
+    <script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 </body>
 
 </html>
