@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\MailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,7 +40,13 @@ Route::get('/dashboard', function () {
 // require __DIR__.'/auth.php';
 
 Route::get('/bookings/create', [BookingController::class, 'create'])->middleware(['auth'])->name('bookings.create');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+// Route::get('/oders', [BookingController::class, 'create'])->middleware(['auth'])->name('bookings.create');
 
-Route::resource('/bookings',BookingController::class);
+// Route::get('/Confirm/order', [BookingController::class, 'create'])->middleware(['auth'])->name('bookings.create');
+
+// Route::post('/sendEmail', [MailController::class, 'sendMail'])->name('send.email');
+
+// Route::resource('/bookings',BookingController::class);
 
 require __DIR__.'/auth.php';

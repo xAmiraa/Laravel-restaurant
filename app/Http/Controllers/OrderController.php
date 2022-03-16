@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
+use App\Models\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\OrderMail;
-class BookingController extends Controller
-{
-  public  $details=array();
 
+class OrderController extends Controller
+{
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +14,8 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return "Hello";    }
+        //
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +24,6 @@ class BookingController extends Controller
      */
     public function create()
     {
-        return view('bookings.create');
         //
     }
 
@@ -38,33 +35,16 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-
-        $details= 'New Order!';
-
-        Booking::create([
-            "firstName"=>$request->firstName,
-            "lastName"=>$request->lastName,
-            "email"=>$request->email,
-            "tableType"=>$request->tableType,
-            "guestNumber"=>$request->guestNumber,
-            "Placement"=>$request->Placement,
-            "Date"=>$request->Date,
-            "Time"=>$request->Time,
-            "Note"=>$request->Note
-        ]);
-
-        Mail::to('amiramahana96@gmail.com')->send(new OrderMail($details));
-        return view('mail.confirmSent');
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Booking  $booking
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function show(Booking $booking)
+    public function show(Order $order)
     {
         //
     }
@@ -72,10 +52,10 @@ class BookingController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Booking  $booking
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function edit(Booking $booking)
+    public function edit(Order $order)
     {
         //
     }
@@ -84,10 +64,10 @@ class BookingController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Booking  $booking
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Booking $booking)
+    public function update(Request $request, Order $order)
     {
         //
     }
@@ -95,10 +75,10 @@ class BookingController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Booking  $booking
+     * @param  \App\Models\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Booking $booking)
+    public function destroy(Order $order)
     {
         //
     }

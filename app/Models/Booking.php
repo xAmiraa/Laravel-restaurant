@@ -16,6 +16,7 @@ class Booking extends Model
 
 
     // ];
+      protected $table = 'bookings';
     protected $guarded = [];
     use HasFactory;
 }

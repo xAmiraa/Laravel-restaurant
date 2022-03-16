@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Booking Section -->
-    
+
     <section id="form" data-aos="fade-up">
         <div class="container">
             <h3 class="form__title">Book Table</h3>

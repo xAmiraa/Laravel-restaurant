@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ URL::asset('css/globalStyles.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/components.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/sendConfirm.css') }}">
+
 
     <!-- aos library css  -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -19,6 +21,7 @@
 </head>
 
 <body>
+    
     <div class="nav">
         <div class="container">
             <div class="nav__wrapper">
@@ -54,9 +57,9 @@
                                 @auth
                                     <li><a class="btn primary-btn" href={{ route('bookings.create') }}>Book Table</a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <div>{{ Auth::user()->name }}</div>
-                                    </li>
+                                    </li> --}}
                                     <li>
 
                                         <!-- Authentication -->
@@ -64,7 +67,7 @@
                                             @csrf
 
                                             <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                                    this.closest('form').submit();">
+                                                                                this.closest('form').submit();">
                                                 {{ __('Log Out') }}
                                             </x-dropdown-link>
                                         </form>
@@ -236,13 +239,7 @@
             </div>
         </div>
     </footer>
-    <div id="copyright">
-        <div class="container">
-            <p class="copyright__text">
-                © copyright 2021 Shaif’s Cuisine | All rights reserved
-            </p>
-        </div>
-    </div>
+
     <!-- End Footer -->
 
     <!-- aos script -->

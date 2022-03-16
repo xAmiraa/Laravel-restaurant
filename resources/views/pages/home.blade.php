@@ -18,8 +18,8 @@
                             environment.
                         </p>
                         <div class="button__wrapper">
-                            <a href="./menu.html" class="btn primary-btn">Explore Menu</a>
-                            <a href="./booking.html" class="btn">Book Table</a>
+                            <a href={{ route('menu') }} class="btn primary-btn">Explore Menu</a>
+                            <a href={{ route('bookings.create') }} class="btn">Book Table</a>
                         </div>
                     </div>
                 </div>
@@ -99,27 +99,7 @@
                             garlic, and onion, these spicy sweet potato fries are full of flavor.
                         </p>
                     </div>
-                    <div class="ourSpecials__item">
-                        <div class="ourSpecials__item__img">
-                            <img src="./images/food-1.png" alt="food img">
-                        </div>
-                        <h2 class="ourSpecials__item__title">
-                            Vegan Salad bowl
-                        </h2>
-                        <h3 class="ourSpecials__item__price">
-                            $18
-                        </h3>
-                        <div class="ourSpecials__item__stars">
-                            <img src="./images/3star.png" alt="3 stars">
-                        </div>
-                        <p class="ourSpecials__item__text">
-                            Vegan salad bowl are immensely satisfying with any combination of whole grains, pulses,
-                            noodles, raw or
-                            cooked fruits, and veggies all topped off with a delicious sauce or dressing – each bite is
-                            an explosion
-                            of flavors and textures.
-                        </p>
-                    </div>
+
                 </div>
                 <div class="ourSpecials__right">
                     <h2 class="ourSpecials__title">
@@ -130,7 +110,7 @@
                         meals are
                         delivered to our customers
                     </p>
-                    <a href="./booking.html" class="btn primary-btn">Book Table</a>
+                    <a href={{ route('bookings.create') }}class="btn primary-btn">Book Table</a>
                 </div>
             </div>
         </div>
@@ -214,7 +194,7 @@
                     <div class="discount__stars">
                         <img src="./images/3star.png" alt="3 stars">
                     </div>
-                    <a class="btn primary-btn" href="./booking.html">Book Table</a>
+                    <a class="btn primary-btn" href={{ route('bookings.create') }}>Book Table</a>
                 </div>
             </div>
         </div>
@@ -273,7 +253,7 @@
                     <p class="eventsInfo__text">Book your private event or corporate function at Shaif's cuisine to
                         experience a
                         truly unique experience.</p>
-                    <a href="./contact.html" class="btn primary-btn">Contact Now</a>
+                    <a href={{ route('contact') }} class="btn primary-btn">Contact Now</a>
                 </div>
             </div>
         </div>
@@ -407,25 +387,6 @@
     </section>
     <!-- End Testimonial Section -->
     <!-- Newsletter Section -->
-    <section id="newsletter" data-aos="fade-up">
-        <div class="container">
-            <div class="newsletter__wrapper">
-                <div class="newsletter__info">
-                    <h3 class="newsletter__title">Join Newsletter</h3>
-                    <p class="newsletter__text">
-                        Get notified with the latest news and recent offers from the “Shaif’s Cuisine”
-                    </p>
-                </div>
-                <div class="newsletter__form">
-                    <form action="">
-                        <label for="email">
-                            <input type="email" placeholder="Your Email Address">
-                        </label>
-                        <button type="submit">Join</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+
     <!-- End Newsletter Section -->
 @endsection

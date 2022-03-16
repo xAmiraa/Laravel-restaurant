@@ -1,0 +1,24 @@
+.Cont {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.confirrm {
+    width: 500px;
+    height: 250px;
+    border: 0.5px solid rgb(219, 215, 215);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5fcf4;
+    font-size: 21px;
+    -webkit-box-shadow: 2px 5px 16px 0px #536070;
+    box-shadow: 2px 5px 16px 0px #8ca3bd;
+}
+.thank{
+    margin-top: 30px;
+}
