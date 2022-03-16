@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Shaif's Cuisine</title>
-    <link rel="stylesheet" href="{{ URL::secure_asset('css/reset.css') }}">
+    @production
+   <link rel="stylesheet" href="{{ URL::secure_asset('css/reset.css') }}">
     <link rel="stylesheet" href="{{ URL::secure_asset('css/globalStyles.css') }}">
     <link rel="stylesheet" href="{{ URL::secure_asset('css/components.css') }}">
     <link rel="stylesheet" href="{{ URL::secure_asset('css/menu.css') }}">
     <link rel="stylesheet" href="{{ URL::secure_asset('css/sendConfirm.css') }}">
+
+    @endproduction
 
 
     <!-- aos library css  -->
