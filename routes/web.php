@@ -14,7 +14,7 @@ use App\Http\Controllers\BookingController;
 */
 
 Route::get('/', function () {
-    return view('layouts.layout');
+    return view('pages.home');
 })->name('home');
 Route::get('/menu', function () {
     return view('pages.menu');
@@ -37,6 +37,7 @@ Route::get('/dashboard', function () {
 
 // require __DIR__.'/auth.php';
 
+Route::get('/bookings/create', [BookingController::class, 'create'])->middleware(['auth'])->name('bookings.create');
 
 Route::resource('/bookings',BookingController::class);
 
